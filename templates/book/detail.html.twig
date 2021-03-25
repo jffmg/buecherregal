@@ -1,0 +1,37 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	Détail d'un livre - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+	<h2>{{ book.title }}</h2>
+
+	<div>{{ book.authorId }}</div>
+
+	<div>{{ book.datePublished|date("Y") }}, {{ book.publisherId }}</div>
+
+	<h4>VIII.</h4>
+	<p>
+		Die erste und wesentlichste Eigenschaft eines Schriftstellers, welcher einen
+		Beitrag zur Menschen- und Völkerkunde aus eigener Beobachtung liefert, ist:
+		daß er den aufrichtigen Willen habe, die Wahrheit zu sagen, folglich keiner
+		Leidenschaft, keiner vorgefaßten Meinung, keiner interessirten Privatabsicht
+		wissentlich einigen Einfluß in seine Nachrichten und Bemerkungen erlaube.
+		Seine erste Pflicht ist Wahrhaftigkeit und Unparteilichkeit: und da wir zu
+		Allem berechtigt sind, was eine nothwendige Bedingung der Erfüllung unsrer
+		Pflicht ist; so ist auch, vermöge der Natur der Sache, Freimüthigkeit ein
+		Recht, das keinem Schriftsteller dieser Classe streitig gemacht werden kann.
+		Er muß die Wahrheit sagen wollen und sagen dürfen.
+	</p>
+
+	<h4>IX.</h4>
+	<p>
+		Diesemnach ist ein Schriftsteller vollkommen berechtigt, von dem Volke, über
+		welches er uns seine Beobachtungen mittheilt, Alles zu sagen, was er gesehen
+		hat, Gutes und Böses, Rühmliches und Tadelhaftes. Mit ungetreuen Gemälden,
+		welche nur die schöne Seite darstellen und die fehlerhafte entweder ganz
+		verdunkeln oder gar durch schmeichlerische Verschönerung verfälschen, ist der
+		Welt nichts gedient.
+	</p>
+{% endblock %}

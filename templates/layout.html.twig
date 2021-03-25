@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" type="image/jpg" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/app.css">
+	<title>{% block title %}Bibliothèque{% endblock %}</title>
+</head>
+<body>
+<div class="page">
+	<header>
+		{% include 'inc/header.html.twig' %}
+		<nav>{% include 'inc/nav.html.twig' %}</nav>
+	</header>
+	<main>
+		{% block main %}
+			C'est le main.
+		{% endblock %}
+	</main>
+	<footer>
+		{% include 'inc/footer.html.twig' %}
+	</footer>
+</div>
+</body>
+</html>

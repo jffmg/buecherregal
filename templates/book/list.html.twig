@@ -1,0 +1,86 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+	Liste des livres - {{ parent() }}
+{% endblock %}
+
+{% block main %}
+	<h2>Liste des livres</h2>
+
+	{% for book in books %}
+		<div class="app-books">
+			<a href="{{ path('book_detail', {'id': book.id}) }}">{{ book.title }}</a>, {{ book.authorId }} ({{ book.publisherId }})
+		</div>
+	{% endfor %}
+
+	<h4>IV.</h4>
+	<p>
+		Die nöthigste und nützlichste aller Wissenschaften oder, noch genauer zu
+		reden, diejenige, in welcher alle übrige eingeschlossen sind, ist die
+		Wissenschaft des Menschen:<br/>
+
+		<em>Der Menschheit eignes Studium ist der Mensch.</em><br/>
+
+		Sie ist eine Aufgabe, an deren vollständiger und reiner Auflösung man noch
+		Jahrtausende arbeiten wird, ohne damit zu Stande gekommen zu seyn. Sie
+		anzubauen, zu fördern, immer größere Fortschritte darin zu thun, ist der
+		Gegenstand des Menschenstudiums; und wie könnte dieses auf andere Weise mit
+		Erfolge getrieben werden, als indem man die Menschen, wie sie von jeher waren,
+		und wie sie dermalen sind, nach allen ihren Beschaffenheiten, Verhältnissen
+		und Umständen kennen zu lernen sucht?
+	</p>
+
+	<h4>V.</h4>
+	<p>
+		Diese historische Kenntniß der vernünftigen Erdebewohner ist die Grundlage
+		aller echt philosophischen Wissenschaft, welche die Natur und Bestimmung des
+		Menschen, seine Rechte und seine Pflichten, die Ursachen seines Elendes und
+		die Bedingungen seines Wohlstandes, die Mittel, jenes zu mindern und diesen zu
+		befördern, kurz, das allgemeine Beste des menschlichen Geschlechtes zum
+		Gegenstande hat. Um heraus zu bringen, was dem Menschen möglich ist, muß man
+		wissen, was er wirklich ist und wirklich geleistet hat. Um seinen Zustand zu
+		verbessern und seinen Gebrechen abzuhelfen, muß man erst wissen, wo es ihm
+		fehlt, und, woran es liegt, daß es nicht besser um ihn steht. Im Grunde ist
+		also alle echte Menschenkenntniß historisch. Die Geschichte der Völker, nach
+		ihrer ehemaligen und gegenwärtigen Beschaffenheit, in derjenigen Verbindung
+		der Thatsachen und Begebenheiten, woraus man sieht, wie sie zusammen hangen,
+		und wie die Wirkung oder der Erfolg des Einen wieder die Veranlassung oder
+		Ursache des Andern wird – diese Philosophie der Menschengeschichte ist nichts
+		Anderes, als Darstellung dessen, was sich mit den Menschen zugetragen und
+		immerfort zuträgt; Darstellung eines immer fortlaufenden Factums, wozu man
+		nicht anders gelangen kann, als indem man die Augen aufmacht und sieht, und
+		indem diejenigen, welche mehr Gelegenheit als alle Andere gehabt haben, zu
+		sehen, was zu sehen ist, ihre Beobachtungen den Andern mittheilen.
+	</p>
+
+	<h4>VI.</h4>
+	<p>
+		Aus diesem Gesichtspunkte sind alle Beiträge zu beurtheilen, welche von
+		verständigen und erfahrenen Männern, von Seefahrern und Landfahrern, Reisigen
+		und Fußgängern, Gelehrten und Ungelehrten (denn auch Ungelehrte können den
+		Geist der Beobachtung haben und sehen oft aus gesundern Augen als Gelehrte von
+		Profession) zur Erd- und Völkerkunde oder, mit einem Wort, zur
+		Menschenkenntniß in größern oder kleinern Bruchstücken bekannt gemacht worden
+		sind. Ans diesem Gesichtspunkte erkennt man ihre Schätzbarkeit und daß dem
+		menschlichen Geschlecht überhaupt und jedem Volke, jedem einzelnen
+		Staatskörper und jedem einzelnen Menschen insbesondere daran gelegen ist, daß
+		solcher Beiträge recht viele in dem allgemeinen Magazine der menschlichen
+		Kenntnisse niedergelegt werden.
+	</p>
+
+	<h4>VII.</h4>
+	<p>
+		Insonderheit ist jedem großen Volke – und ganz vorzüglich dem unsrigen (dessen
+		Staatskörper eine so sonderbare Gestalt hat und aus so mannigfaltigen und
+		ungleichartigen Theilen mehr zufälliger Weise zusammen gewachsen, als
+		planmäßig zusammen gesetzt ist), daran gelegen, seinen gegenwärtigen Zustand
+		so genau als möglich zu kennen. Jeder noch so geringe Beitrag, der über die
+		Beschaffenheit der Staatswirthschaft, Polizei, bürgerlichen und militärischen
+		Verfassung, Religion, Sitten, öffentlichen Erziehung, Wissenschaften und
+		Künste, Gewerbe, Landwirthschaft u. s. w. in jedem Theile unseres gemeinsamen
+		Vaterlandes und über die Stufe der Cultur, Aufklärung, Humanisirung, Freiheit,
+		Thätigkeit und Emporstrebung zum Bessern, die jeder derselben erreicht hat,
+		einiges Licht verbreitet, jeder solche Beitrag ist schätzbar und verdient
+		unsern Dank.
+	</p>
+{% endblock %}
