@@ -28,6 +28,12 @@ class Book
     private $title;
 
     /**
+     * @ORM\ManyToMany(targetEntity=Author::class)
+     * @ORM\JoinTable(name="author_book")
+     */
+    private $authors;
+
+    /**
      * @ORM\Column (type="integer", length=255, nullable=true)
      */
     private $authorId;
@@ -132,6 +138,24 @@ class Book
     {
         $this->title = $title;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthors()
+    {
+        return $this->authors;
+    }
+
+    /**
+     * @param mixed $authors
+     */
+    public function setAuthors($authors): void
+    {
+        $this->authors = $authors;
+    }
+
+    
 
     /**
      * @return mixed
