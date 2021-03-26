@@ -155,7 +155,7 @@ class Book
         $this->authors = $authors;
     }
 
-    
+
 
     /**
      * @return mixed
