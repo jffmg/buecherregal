@@ -36,30 +36,6 @@ class Book
     /**
      * @ORM\Column (type="integer", length=255, nullable=true)
      */
-    private $authorId;
-
-    /**
-     * @Assert\NotBlank(message="Please provide a name.")
-     * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255)
-     */
-    private $authorFamilyName;
-
-    /**
-     * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255)
-     */
-    private $authorGivenName;
-
-    /**
-     * * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255, nullable=true)
-     */
-    private $publisher;
-
-    /**
-     * @ORM\Column (type="integer", length=255, nullable=true)
-     */
     private $publisherId;
 
 //    private $translator;
