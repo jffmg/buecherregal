@@ -28,28 +28,10 @@ class Book
     private $title;
 
     /**
-     * @ORM\Column (type="integer", length=255, nullable=true)
+     * @ORM\ManyToMany(targetEntity=Author::class)
+     * @ORM\JoinTable(name="author_book")
      */
-    private $authorId;
-
-    /**
-     * @Assert\NotBlank(message="Please provide a name.")
-     * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255)
-     */
-    private $authorFamilyName;
-
-    /**
-     * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255)
-     */
-    private $authorGivenName;
-
-    /**
-     * * @Assert\Length(max=255, maxMessage="Max 255 characters")
-     * @ORM\Column (type="string", length=255, nullable=true)
-     */
-    private $publisher;
+    private $authors;
 
     /**
      * @ORM\Column (type="integer", length=255, nullable=true)
@@ -132,6 +114,24 @@ class Book
     {
         $this->title = $title;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getAuthors()
+    {
+        return $this->authors;
+    }
+
+    /**
+     * @param mixed $authors
+     */
+    public function setAuthors($authors): void
+    {
+        $this->authors = $authors;
+    }
+
+
 
     /**
      * @return mixed

@@ -9,7 +9,9 @@
 
 	{% for book in books %}
 		<div class="app-books">
-			<a href="{{ path('book_detail', {'id': book.id}) }}">{{ book.title }}</a>, {{ book.authorId }} ({{ book.publisherId }})
+			<a href="{{ path('book_detail', {'id': book.id}) }}">{{ book.title }}</a>, {%  for author in book.authors %}
+				{{ auteur.name }}
+			{%  endfor %} ({{ book.publisherId }})
 		</div>
 	{% endfor %}
 
